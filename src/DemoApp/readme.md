@@ -7,11 +7,11 @@
 # init
 dotnet ef migrations add InitialCreate
 
-# add table
-dotnet ef database update
-
 # add column CreatedTimestamp
 dotnet ef migrations add AddBlogCreatedTimestamp
+
+# add table
+dotnet ef database update
 
 ```
 

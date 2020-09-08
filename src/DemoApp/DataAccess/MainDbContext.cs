@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace DemoApp.DataAccess
 {
@@ -16,5 +17,6 @@ namespace DemoApp.DataAccess
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public DateTime CreatedTimestamp { get; set; }
     }
 }
