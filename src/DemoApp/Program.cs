@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using DemoApp.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +21,8 @@ namespace DemoApp
 
                 mainDbContext.Database.Migrate();
 
-
-
+                var count = mainDbContext.Blogs.Count();
+                Console.WriteLine(count);
             }
             Console.Read();
         }

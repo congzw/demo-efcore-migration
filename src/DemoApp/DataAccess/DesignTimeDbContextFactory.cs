@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace DemoApp.DataAccess
 {
-    public class DbContextFactory : IDesignTimeDbContextFactory<MainDbContext>
+    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<MainDbContext>
     {
         public MainDbContext CreateDbContext(string[] args)
         {

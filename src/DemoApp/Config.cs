@@ -15,14 +15,8 @@ namespace DemoApp
 
             var services = new ServiceCollection();
                 services
-                    .AddDbContext<MainDbContext>(options => options.UseSqlite(connectionString))
-                    .AddMigrate(connectionString)
+                    .AddDbContext<MainDbContext>(options => options.UseSqlite(connectionString, builder => builder.MigrationsAssembly("DemoApp")))
                 .BuildServiceProvider();
-            return services;
-        }
-
-        private static IServiceCollection AddMigrate(this IServiceCollection services, string connString)
-        {
             return services;
         }
     }
